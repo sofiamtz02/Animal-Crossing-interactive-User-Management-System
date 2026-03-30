@@ -14,6 +14,7 @@ This project simulates an Employee Portal for a company themed on Animal Crossin
 - Inputs are validated using Regex to prevent invalid characters and protect against SQL injection attacks
 - The system checks credentials against a live list of active users (so disposed employees can't log in)
 - A small loading spinner shows while the login processes
+<img width="500" height="100%" alt="ac_login" src="https://github.com/user-attachments/assets/3ed4a95a-0df6-4b07-96c9-167957ea1293" />
 
 **Profile Cards**
 Each user card includes:
@@ -27,11 +28,13 @@ Each user card includes:
 - Admins can see all employee profiles, delete employees, and view the Disposed Villagers list
 - Employees can only see the Admin cards and their own profile card
 - Admins cannot delete themselves or other Admins — only Employees
+<img width="500" height="100%" alt="admin-view-dashboard" src="https://github.com/user-attachments/assets/e810da10-a8b9-48af-8d6a-5c60148198bb" />
 
 **Disposed Villagers**
 - When an Admin deletes an Employee, the card fades out with an animation and moves to the Disposed section
 - Disposed cards show the employee's profile picture, full name, and disposed status
 - Deleted users are removed from `activeUsers` so they can no longer log in, but the original `baseUsers` list stays untouched
+<img width="500" height="100%" alt="admin-view-disposed" src="https://github.com/user-attachments/assets/2f361c33-ce3d-4322-b401-ee1511c352e7" />
 
 **Logout**
 - Clicking logout triggers a fade-out animation, clears the current user session (but doesn't reset the active list), hides all profile cards, and returns to the main login screen
