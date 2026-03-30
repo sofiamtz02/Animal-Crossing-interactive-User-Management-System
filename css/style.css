@@ -1,0 +1,576 @@
+:root {
+    --white: #f8f8f0;
+    --bg-card: #f8f8f0;
+    --green: #007d75;
+    --green02: #008077;
+    --base-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+
+    /*navbar*/
+    --cubic-bezier-in: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --cubic-bezier-out: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    --red-logout: #ee7276;
+
+    /*user cards colors*/
+    --card-bg: #fcfbf5;
+    --card-bg-shadow: #e5dac7;
+    --card-body-txt: #624c37;
+    --card-hr: #f7f4e6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    /*prevent the overflow of the right side of the screen*/
+    overflow-x: hidden;
+    background-image: url('../images/pattern/pattern-leaves-white.jpg') !important;
+}
+
+.main-body-01 {
+    height: 96vh;
+    /*prevent the overflow of the right side of the screen*/
+}
+
+/********* MAIN ************/
+#main {
+    width: 100%;
+    height: 100vh;
+    background-image: url('../images/pattern/pattern-leaves-turquoise-2x.jpg') !important;
+    background-repeat: repeat;
+
+    /*background animation for it to move down right*/
+    animation: leaf-bg-animation 80s linear infinite;
+}
+
+@keyframes leaf-bg-animation {
+
+    /*transform: translate(); would move my whole main section :/ */
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        /*the higher the number, the faster the movement*/
+        background-position: 1000px 1000px;
+    }
+}
+
+/*==== logo ==== */
+
+.logo {
+    position: relative;
+    z-index: 1;
+    background-color: #f7f4e6;
+    padding: 44px 54px 5px 54px;
+    border-radius: 128px 128px 52% 52%;
+}
+
+.logo img {
+    position: relative;
+    max-width: 450px;
+    height: 100%;
+    z-index: 100;
+}
+
+.logo02 {
+    position: relative;
+    background-color: #f7f4e6;
+    margin-top: -118px;
+    padding: 105px 150px 54px 150px;
+    border-radius: 222px 222px 100% 100%;
+}
+
+.logo02 button {
+    position: relative;
+    z-index: 20;
+
+    font-family: "Zilla Slab", sans-serif;
+    background-color: var(--green);
+    padding: 15px 97px;
+    color: var(--white);
+    border-radius: 22px;
+    transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+
+.logo02 button:hover {
+    transform: scale(1.2);
+    color: var(--white);
+    background-color: var(--green02);
+}
+
+/************ FORM **************/
+.text-card--yellow {
+    background-color: rgb(241 226 111 / 62%);
+    padding: 11px;
+    border-radius: 10px;
+}
+
+/***Modal content***/
+#userLogin .modal-content {
+    background-color: #f8f8f0ad !important;
+    box-shadow: var(--base-shadow);
+    border: none;
+
+}
+
+/*modal header*/
+#userLogin .modal-header {
+    padding: 5px 1rem;
+    justify-content: center;
+    border: none;
+}
+
+#userLogin .modal-title {
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+/*modal body*/
+.input-group-text {
+    font-size: 2rem;
+}
+
+.bi-leaf-fill {
+    font-size: 1.2rem;
+    color: var(--green02);
+}
+
+/*modal footer*/
+#userLogin .modal-header {
+    border: none;
+}
+
+/*replace for boostrap color button */
+#userLogin .btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #2d6895;
+    --bs-btn-border-color: #2d6895;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #2d6895;
+    --bs-btn-hover-border-color: #114064;
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #114064;
+    --bs-btn-active-border-color: #2d6895;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #2d6895;
+    --bs-btn-disabled-border-color: #2d6895;
+}
+
+/*error messages*/
+#errorMessage {
+    padding: 0 10px;
+    margin: 1rem 0;
+}
+
+/* ============ section 1. navbar =========== */
+#showCard {
+    margin: 107px 0;
+}
+
+/* main styling of navbar */
+#nav-styling {
+    top: 19px;
+    width: 96%;
+    margin: auto;
+    border-radius: 20px;
+    opacity: 99%;
+    padding: 12px 10px;
+    background-image: url('../images/pattern/pattern-confetti.jpg') !important;
+    background-repeat: repeat;
+    background-size: 28%;
+    box-shadow: 2px 0px 15px 6px rgba(0, 129, 96, 0.3);
+}
+
+#nav-styling .navbar-brand {
+    padding: 0 15px;
+    font-weight: 700;
+    font-stretch: semi-expanded;
+    font-size: 2rem !important;
+    color: #ffc944 !important;
+    text-shadow: #212529 1px 3px 6px;
+}
+
+.nav-decor {
+    position: relative;
+    background-color: #fcfbf5;
+    margin: 0 7px;
+    border-radius: 38px 48% 27px 40%;
+    padding: 0 10px;
+    border: 4px solid #288b4b;
+}
+
+.nav-decor:hover {
+    border: none;
+}
+
+/* hidden yellow shape */
+.nav-decor::before {
+    content: "";
+    position: absolute;
+    inset: -6px;
+    /* inset of -6 is
+    top: -6px
+    right: -6px
+    bottom: -6px
+    left: -6px
+    */
+    background-color: #f1e26f;
+    border-radius: 38px 48% 27px 40%;
+    z-index: -1;
+
+    transform: scale(0.7);
+    opacity: 0;
+
+    transition: transform 0.3s var(--cubic-bezier-out), opacity 0.3s ease;
+}
+
+/* hover animation */
+.nav-decor:hover::before {
+    transform: scale(1);
+    opacity: 1;
+    transition: transform 0.3s var(--cubic-bezier-in), opacity 0.3s ease;
+}
+
+.nav-decor::before :hover {
+    text-shadow: #f1e26f 1px 0 10px;
+    filter: drop-shadow(0px 5px 5px rgba(107, 92, 67, 0.3));
+    transform: scaleX(0.9) scaleY(0.7);
+
+    transition: transform 0.3s var(--cubic-bezier-out);
+}
+
+/* logout button */
+
+#logoutBtn {
+    color: rgb(255 255 255) !important;
+    background: none;
+}
+
+#logoutBtn:active,
+#logoutBtn:hover {
+    border-color: transparent;
+}
+
+.nav-decor-logout {
+    background-color: var(--red-logout);
+    border: 4px solid transparent;
+    /* padding: 0 4px; */
+}
+
+.nav-decor-logout:hover {
+    background-color: var(--red-logout);
+    border: 4px solid transparent;
+    /* padding: 0 4px; */
+}
+
+/* hover before */
+.nav-decor-logout::before {
+    content: "";
+    position: absolute;
+    inset: -12px;
+    background-color: #f1e26f;
+    border-radius: 38px 48% 27px 40%;
+    z-index: -1;
+
+    transform: scale(1);
+    opacity: 0;
+
+    transition: transform 0.3s var(--cubic-bezier-out), opacity 0.3s ease;
+}
+
+.nav-decor-logout:hover::before {
+    transform: scale(1);
+    opacity: 1;
+    transition: transform 0.3s var(--cubic-bezier-in),
+        opacity 0.3s ease;
+}
+
+.nav-decor-logout::before :hover {
+    text-shadow: #f1e26f 1px 0 10px;
+    filter: drop-shadow(0px 5px 5px rgba(107, 92, 67, 0.3));
+    transform: scaleX(0.9) scaleY(0.7);
+
+    transition: transform 0.3s var(--cubic-bezier-out)
+}
+
+/*========== user cards =========== */
+/*profiles */
+#showCard,
+#showDisposedCard {
+    margin: 134px 0;
+    /*extra space of margin for navbar*/
+    width: 100%;
+    /* height: 100%; */
+    /* height: 100vh; */
+    padding: 0 20px;
+    /* background-image: url('images/pattern/pattern-leaves-white.jpg') !important; */
+}
+
+.card {
+    padding: 14px 20px;
+    background-color: var(--card-bg) !important;
+    box-shadow: 0 10px var(--card-bg-shadow);
+    border-radius: 30px !important;
+    border: none !important;
+    max-width: 550px;
+    min-width: 500px !important;
+}
+
+.card-header {
+    padding: 0 1rem !important;
+    background-color: #0000 !important;
+}
+
+.card-head-decor {
+    position: relative;
+
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* header text */
+.card-header-text {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: rgb(145, 162, 138);
+
+    margin: 0;
+    padding: 0 10px;
+}
+
+/* header hr */
+.card-header-decor {
+    background-color: rgb(145, 162, 138);
+    border: 0 transparent none;
+    border-radius: 2px;
+    width: 70%;
+    height: 3px;
+
+    opacity: 1;
+}
+
+/* ========================== card body =============== */
+/* == card body == */
+/* Card image pfp */
+.showcard-body {
+    position: relative;
+    z-index: 0;
+    background-color: rgb(215, 215, 215);
+    padding: 0px 10px;
+}
+
+/* background of body */
+.showcard-body::before {
+    /* position for backgorund overlay */
+    position: absolute;
+    z-index: -1;
+    /* pseudos must have content defined even if empty */
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+
+
+    opacity: .15;
+    background-size: 80px;
+    background-repeat: repeat
+}
+
+/* profile frame */
+.pfp-section {
+    align-items: center !important;
+    width: 100px;
+    min-width: 150px;
+    min-height: 150px;
+    padding: 15px 0;
+}
+
+.pfp-photo .pfp-frame {
+    border-radius: 25% 25% 25% 25% / 22.5% 22.5% 22.5% 22.5%;
+    padding: 12px;
+    background-color: #f7f4e6;
+
+    max-width: 250px;
+    max-height: 100%;
+
+    /* centered view */
+    margin: auto;
+}
+
+/* profile container for img */
+.pfp-photo .pfp-container {
+    overflow: hidden;
+    border-radius: 22.5% 22.5% 22.5% 22.5% / 22.5% 22.5% 22.5% 22.5%;
+}
+
+/* image */
+.pfp-photo .pfp {
+    width: 100%;
+    height: 100%;
+}
+
+/* body text */
+.card-body {
+    color: var(--card-body-txt) !important;
+}
+
+.hr-info-divider {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 2px;
+    border: none;
+    background-color: var(--card-hr);
+
+    /* opacity for the hr to be seen */
+    opacity: 1;
+}
+
+/* ========================== Disposed Card =============== */
+#showDisposedCard h3 {
+    font-family: "Delicious Handrawn", cursive;
+    color: #e83434;
+    font-size: 4rem;
+    margin-bottom: 46px;
+}
+
+.fade-out-card {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.7s ease, transform 0.5s ease;
+}
+
+/* ========================== Animation spining =============== */
+.loadingSpin {
+    font-size: 2rem;
+    font-weight: 900;
+    color: red;
+    display: inline-block;
+    animation: load-Spin-anim 1s linear infinite;
+}
+
+@keyframes load-Spin-anim {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ========================== Desktop smaller mode =============== */
+@media (max-width: 1366px) {
+
+    .card {
+        max-width: 353px;
+        min-width: 417px !important;
+    }
+
+    .card-body {
+        text-align: center;
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 991px) {
+
+    .card {
+        max-width: 353px;
+        min-width: 353px !important;
+    }
+
+    .card-body {
+        text-align: center;
+        width: 100%;
+    }
+
+}
+/* ========================== tablet mode =============== */
+
+/*tablet*/
+@media (max-width: 769px) {
+
+    /*========NAVBAR======*/
+    #nav-styling .navbar-brand {
+        padding: 0 2px;
+        font-size: 23px !important;
+    }
+
+    .nav-decor {
+        margin: 15px 7px;
+        min-width: 200px;
+        max-width: 200px;
+    }
+
+    #nav-styling .navbar-nav {
+        align-items: center;
+    }
+
+    /* card */
+    .card {
+        max-width: 600px;
+        min-width: 350px !important;
+        min-width: 353px !important;
+    }
+
+    /* card body */
+    /* profile picture */
+    .pfp-section {
+        padding: 15px 0;
+        width: 100%;
+    }
+
+}
+/* ========================== Phone mode =============== */
+
+/* phone sm = 576px */
+@media (max-width: 576px) {
+
+    /*========NAVBAR======*/
+    #nav-styling .navbar-brand {
+        padding: 0 2px;
+        font-size: 23px !important;
+    }
+
+    .nav-decor {
+        margin: 15px 7px;
+        min-width: 200px;
+        max-width: 200px;
+    }
+
+    #nav-styling .navbar-nav {
+        align-items: center;
+    }
+
+    /*==== card ========= */
+    .card {
+        max-width: 600px;
+        min-width: 200px !important;
+    }
+
+    /* card body */
+    /* profile picture */
+    .pfp-section {
+        padding: 15px 0;
+        width: 100%;
+    }
+
+
+}
